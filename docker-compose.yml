@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  hello-docker:
+    container_name: hello-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+
+  mongo:
+      image: mongo
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: shubham
+        MONGO_INITDB_ROOT_PASSWORD: mypassword
+      volumes:
+        - mongo-db:/data/db
+
+  jenkins:
+    image: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+
+volumes:
+  mongo-db:
+
+  
+
