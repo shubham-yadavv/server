@@ -1,8 +1,7 @@
 version: "3"
 
 services:
-  hello-docker:
-    container_name: hello-container
+  node-docker:
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,6 +9,8 @@ services:
       - "3000:3000"
     environment:
       - PORT=3000
+    depends_on:
+      - mongo
 
   mongo:
       image: mongo
@@ -18,13 +19,6 @@ services:
         MONGO_INITDB_ROOT_PASSWORD: mypassword
       volumes:
         - mongo-db:/data/db
-
-  jenkins:
-    image: jenkins
-    ports:
-      - "8080:8080"
-      - "50000:50000"
-
 volumes:
   mongo-db:
 

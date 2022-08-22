@@ -1,8 +1,7 @@
 version: "3"
 
 services:
-  hello-docker:
-    container_name: hello-container
+  node-docker:
     build:
       context: .
       dockerfile: Dockerfile
@@ -14,4 +13,12 @@ services:
 
     environment:
       - NODE_ENV=development
+      - MONGO_USER=shubham
+      - MONGO_PASSWORD=mypassword
     command: npm run dev
+
+  mongo:
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: shubham
+        MONGO_INITDB_ROOT_PASSWORD: mypassword
+       
