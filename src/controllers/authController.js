@@ -19,13 +19,10 @@ exports.signUp = async (req, res) => {
       },
     });
   } catch (e) {
-    console.log(e);
     res.status(400).json({
       status: "fail",
-
     });
   }
-
 };
 
 exports.login = async (req, res) => {
