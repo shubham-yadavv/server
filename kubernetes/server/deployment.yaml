@@ -17,5 +17,6 @@ spec:
       containers:
       - name: server
         image: shubham22121/server:v1
+        imagePullPolicy: Never
         ports:
         - containerPort: 3000
