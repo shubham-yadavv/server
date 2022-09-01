@@ -2,7 +2,7 @@ version: "3"
 services:
   server:
     build: .
-    image: shubham/server
+    image: shubham22121/server:v1
     environment:
       - PORT=3000
     depends_on:
