@@ -13,7 +13,7 @@ const {
   REDIS_URL,
   SESSION_SECRET,
   REDIS_PORT,
-} = require("./config/config");
+} = require("../config/config");
 
 let redisClient = redis.createClient({
   host: REDIS_URL,
