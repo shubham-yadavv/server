@@ -1,3 +1,4 @@
+
 # server
 
 A REST-Full API built with NodeJS and ExpressJs. The API will retrieve post with user authentication and authentication handling.
@@ -14,3 +15,6 @@ A REST-Full API built with NodeJS and ExpressJs. The API will retrieve post with
    `docker-compose up`
    
 4. Navigate to `127.0.0.1:3000`
+
+## system architecture
+<img width="896" alt="Screenshot 2022-09-19 at 7 55 56 PM" src="https://user-images.githubusercontent.com/68185027/191042648-e67bde6f-4158-491d-9188-ac59c06b4747.png">
