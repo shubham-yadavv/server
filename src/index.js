@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const redis = require("redis");
 const cors = require("cors");
+
 let RedisStore = require("connect-redis")(session);
 
 const {
@@ -43,10 +44,13 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
+
+
 app.enable("trust proxy");
 app.use(cors({}));
 app.use(
   session({
+    saveUninitialized: false,
     store: new RedisStore({ client: redisClient }),
     secret: SESSION_SECRET,
     cookie: {
@@ -71,4 +75,6 @@ app.use("/api/v1/posts", postRouter);
 app.use("/api/v1/users", userRouter);
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(port, () => 
+  console.info(`listening on port ${port}`)
+);
