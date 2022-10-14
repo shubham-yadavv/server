@@ -1,7 +1,7 @@
 
 # server
 
-A REST-Full API built with NodeJS and ExpressJs. The API will retrieve post with user authentication and authentication handling.
+Backend for socialmedia application
 
 # How to Setup the Local Server 
 
