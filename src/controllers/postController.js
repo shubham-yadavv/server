@@ -89,3 +89,20 @@ exports.deletePost = async (req, res, next) => {
     });
   }
 };
+
+// get post by search
+exports.getPostBySearch = async (req, res) => {
+  const { searchQuery, tags } = req.query;
+
+  try {
+    const title = new RegExp(searchQuery, "i");
+
+    const posts = await Post.find({
+      $or: [{ title }, { tags: { $in: tags.split(",") } }],
+    });
+
+    res.json({ data: posts });
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+}

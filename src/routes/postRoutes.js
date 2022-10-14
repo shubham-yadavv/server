@@ -11,6 +11,8 @@ router
   .get(protect, postController.getAllPosts)
   .post(protect, postController.createPost);
 
+router.get("/search", postController.getPostBySearch);
+
 router
   .route("/:id")
   .get(protect, postController.getOnePost)
