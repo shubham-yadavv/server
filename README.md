@@ -28,4 +28,5 @@ A REST-Full API built with NodeJS and ExpressJs. The API will retrieve post with
 2. Install Docker if you haven't installed it, yet. You can install by clicking this  <a href="https://www.docker.com/">link</a>
 
 3. Use this command to run the server 
+  
    `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
