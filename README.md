@@ -1,9 +1,26 @@
 
-# server
+# Automatically Scaling Backend
 
-Backend for socialmedia application
+Backend for a social media application
 
-# How to Setup the Local Server 
+| Table of content | 
+|-------------------|
+|[Working](#how-this-backend-system-works)|
+|[System Architecture](#system-architecture)|
+|[How to Setup and Run](#how-to-setup-and-run)|
+
+---
+# How this Backend System works
+This project is a backend for a social networking platform,
+- This backend deployment makes use of [Ngnix](https://www.nginx.com/), as a load balancer 
+- [Redit](https://redis.io/) Is made to work as a caching 
+- [MongoDB](https://www.mongodb.com/) Is the main backend server
+
+# System Architecture
+
+![System Architecture](https://user-images.githubusercontent.com/55801439/197521628-ec41349b-2564-44ea-a618-77a877189f7a.png)
+
+# How to Setup and Run  
 
 1. Clone the Repo by following command
   `git clone https://github.com/shubham-yadavv/server.git` .
@@ -12,21 +29,8 @@ Backend for socialmedia application
 2. Install Docker if you haven't installed it, yet. You can install by clicking this  <a href="https://www.docker.com/">link</a>
 
 3. Use this command to run the server 
-   `docker-compose up`
-   
-4. Navigate to `127.0.0.1:3000`
-
-## system architecture
-<img width="896" alt="Screenshot 2022-09-19 at 7 55 56 PM" src="https://user-images.githubusercontent.com/68185027/191042648-e67bde6f-4158-491d-9188-ac59c06b4747.png">
-
-
-# how to run 
-
-1. Clone the Repo by following command
-  `git clone https://github.com/shubham-yadavv/server.git` .
-
-2. Install Docker if you haven't installed it, yet. You can install by clicking this  <a href="https://www.docker.com/">link</a>
-
-3. Use this command to run the server 
-  
    `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
+   
+4. Navigate to `127.0.0.1:3000` to access the server
+  
+   
